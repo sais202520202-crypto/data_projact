@@ -20,7 +20,6 @@ def load_data():
     parks = pd.read_csv("data/park.csv")
     return stations, rent, parks
 
-
 stations, rent, parks = load_data()
 
 # ======================
@@ -59,7 +58,6 @@ parks_gdf = gpd.GeoDataFrame(
     crs="EPSG:4326"
 )
 
-# 거리 계산용 좌표계 변환
 stations_gdf = stations_gdf.to_crs(epsg=5179)
 parks_gdf = parks_gdf.to_crs(epsg=5179)
 
@@ -83,11 +81,10 @@ heat_data = [
 ]
 
 HeatMap(heat_data).add_to(m)
-
 st_folium(m, width=1000, height=600)
 
 # ======================
-# 간단한 결과 요약
+# 요약 정보
 # ======================
 st.subheader("📊 분석 요약")
 
