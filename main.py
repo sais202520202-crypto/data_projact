@@ -1,13 +1,3 @@
-pip install pandas geopandas folium matplotlib shapely
-SyntaxError: invalid syntax
-data_project/
-│
-├─ main.py              ← 스트림릿 실행 파일
-├─ requirements.txt     ← 라이브러리 목록
-│
-├─ bike_station.csv
-├─ bike_rent.csv
-└─ park.csv
 import streamlit as st
 import pandas as pd
 import geopandas as gpd
@@ -103,12 +93,3 @@ st.subheader("📊 분석 요약")
 st.write(f"총 대여소 수: {len(stations)}")
 st.write(f"평균 공원까지 거리: {stations_gdf['dist_park_m'].mean():.1f} m")
 st.write(f"평균 대여 횟수: {stations['rent_cnt'].mean():.1f} 회")
-streamlit
-pandas
-geopandas
-folium
-streamlit-folium
-shapely
-matplotlib
-pip install -r requirements.txt
-streamlit run main.py
