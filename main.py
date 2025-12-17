@@ -15,10 +15,11 @@ st.title("🚲 공공자전거 이용량과 공원 접근성 분석")
 # ======================
 @st.cache_data
 def load_data():
-    stations = pd.read_csv("bike_station.csv")
-    rent = pd.read_csv("bike_rent.csv")
-    parks = pd.read_csv("park.csv")
+    stations = pd.read_csv("data/bike_station.csv")
+    rent = pd.read_csv("data/bike_rent.csv")
+    parks = pd.read_csv("data/park.csv")
     return stations, rent, parks
+
 
 stations, rent, parks = load_data()
 
