@@ -18,9 +18,15 @@ def load_data():
     stations = pd.read_csv("bike_station.csv")
     rent = pd.read_csv("bike_rent.csv")
     parks = pd.read_csv("park.csv")
+
+    stations = normalize_columns(stations)
+    rent = normalize_columns(rent)
+    parks = normalize_columns(parks)
+
     return stations, rent, parks
 
 stations, rent, parks = load_data()
+
 
 # =========================
 # 결측치 처리
