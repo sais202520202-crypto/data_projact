@@ -25,7 +25,7 @@ def load_data():
 
     return stations, rent, parks
 
-stations, rent, parks = load_data()
+
 
 
 # =========================
